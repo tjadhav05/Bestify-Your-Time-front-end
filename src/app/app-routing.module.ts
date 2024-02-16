@@ -23,7 +23,7 @@ import { QuizListComponent } from './admin/quiz-list/quiz-list.component';
 import { AuthService } from './services/auth.service';
 
 const routes: Routes = [
-  {path:'',redirectTo:'Home',pathMatch:'full'},//default route
+  {path:'',redirectTo:'Home',pathMatch:'full'},//default route is
   {path: 'Home',component: IndexpageComponent},
   {path: 'AdminHome',component:AdminHomeComponent,
   children:[
