@@ -1,0 +1,28 @@
+<div class="wrapper d-flex align-items-stretch">
+  <div class="container">
+    <div class="container mt-2">
+      <div class="row">
+        <button class="btn btn-danger" style="margin: 10px;max-width: 200px;" (click)="addQuestionOption()">Add
+          Question</button>
+
+        <div class="col-md-12 col-sm-12  item" *ngFor="let question of questionByQuizList; let index=index">
+
+          <div class="card item-card card-block mycard">
+
+            <h5 class="card-title">{{index+1}}.{{question['question']}}</h5>
+            <p>A.{{question['option']['optionA']}}</p>
+            <p>B.{{question['option']['optionB']}}</p>
+            <p>C.{{question['option']['optionc']}}</p>
+            <p>D.{{question['option']['optionD']}}</p>
+            <p>Answer:{{question['ans']}}</p>
+            <p>Marks:{{question['marks']}}</p>
+            <button class="btn btn-primary" style="max-width: 100px;margin: 10px;"
+              (click)="updateQue(question['questid'])">Update</button>
+            <button class="btn btn-danger" style="margin: 10px;max-width: 100px;"
+              (click)="deleteFromQuestionList(question['questid'])">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

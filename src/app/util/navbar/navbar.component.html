@@ -1,0 +1,40 @@
+
+<header>
+    <nav class="navbar navbar-expand-lg py-0 navbar-dark black fixed-top" *ngIf="nav.visible">
+        <a class="navbar-brand" routerLink="../Home"><img src="../../../assets/images/ideas.png" style="height: 50px;"
+                alt="">&nbsp;&nbsp;Bestify</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/Home">Home <span class="sr-only">(current)</span></a>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/Quizs">Quizes</a>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="musicLink" routerLink="/ShowFav">Favourites</a>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/GameZone">Games</a>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link text-white" id="musicLink" routerLink="/ContactUs">Contact</a>
+                </li>&nbsp;&nbsp;
+            </ul>
+            <div class="user-panel" *ngIf="log.show">
+                <a routerLink="/auth/Login">Login</a>
+            </div>&nbsp;&nbsp;
+            <div class="user-panel" *ngIf="log.show">
+                <a routerLink="/auth/Register">Register</a>
+            </div>
+            <div class="user-panel" (click)="logout()" *ngIf="!log.show">
+                <a routerLink="/">Logout</a>
+            </div>
+        </div>
+    </nav>
+</header>

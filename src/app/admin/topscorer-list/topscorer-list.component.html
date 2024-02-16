@@ -1,0 +1,28 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <em class="fa fa-table"></em> Top Score List
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Quizname</th>
+            <th>score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let topscore of topScoreList; let index=index">
+            <td><em class="fa fa-trophy  text-warning" aria-hidden="true" style="color: rgb(0, 0, 0);"></em><strong>
+                &nbsp;{{index+1}}</strong></td>
+            <td>{{topscore['username']}}</td>
+            <td>{{topscore['quizname']}}</td>
+            <td>{{topscore['score']}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,158 @@
+$_dark:#0a1931;
+.navbar-top {
+			background: $_dark;
+		}
+section {
+	background: $_dark;
+}
+.content-wrapper {
+	min-height: 100vh;
+	padding-top: 1rem;
+	
+	background: white;
+}
+.mainNav.fixed-top {
+	.sidenav-toggler {
+		display: none;
+	}
+}
+.mainNav.fixed-top.navbar-dark {
+	.sidenav-toggler {
+		// background-color: #212529;
+		background-color: $_dark;
+		a {
+			i {
+				color: #adb5bd;
+			}
+		}
+	}
+}
+.mainNav.fixed-top.navbar-light {
+	.sidenav-toggler {
+		background-color: #dee2e6;
+		a {
+			
+			 	color: #00000080;
+			
+		}
+	}
+}
+// .sidenav-toggled {
+	.mainNav.fixed-top {
+		.sidenav-toggler {
+			//overflow-x: hidden;
+			width: 55px;
+			.nav-item {
+				width: 55px;
+			}
+			.nav-link {
+				width: 55px;
+			}
+		}
+	
+	}
+// }
+.mainNav.static-top {
+	.sidenav-toggler {
+		display: none;
+	}
+}
+.sidenavToggler {
+	i {
+		font-weight: 800;
+	}
+}
+.navbar-sidenav-tooltip.show {
+	display: none;
+}
+@media (min-width: 992px) {
+	.mainNav {
+		.navbar-brand {
+			width: 250px;
+		}
+		.navbar-collapse {
+			overflow: visible;
+			max-height: none;
+			.navbar-sidenav {
+				position: absolute;
+				top: 0;
+				left: 0;
+	
+				-ms-flex-direction: column;
+				flex-direction: column;
+				margin-top: 56px;
+				>.nav-item {
+					width: 250px;
+					padding: 0;
+					>.nav-link {
+						padding: 1em;
+					}
+					.sidenav-second-level {
+						padding-left: 0;
+						list-style: none;
+						>li {
+							width: 250px;
+							>a {
+								padding: 1em;
+								padding-left: 2.75em;
+							}
+						}
+					}
+					.sidenav-third-level {
+						padding-left: 0;
+						list-style: none;
+						>li {
+							width: 250px;
+							>a {
+								padding: 1em;
+								padding-left: 3.75em;
+							}
+						}
+					}
+				}
+			}
+			.navbar-nav {
+				>.nav-item.dropdown {
+					>.nav-link {
+						min-width: 0;
+						&:after {
+							width: 24px;
+							text-align: center;
+						}
+					}
+					.dropdown-menu {
+						>.dropdown-item {
+							>.dropdown-message {
+								max-width: 300px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.mainNav.static-top {
+		.sidenav-toggler {
+			display: flex;
+		}
+	}
+	.content-wrapper {
+		margin-left: 250px;
+	}
+}
+///for button
+.modal .btn-primary {
+  background:#24023b;
+}
+//MODAL BODY
+.modal {
+  .modal-header{ 
+  background-color :#c5dcf5;
+}
+.modal-body{
+    background-color :#c5dcf5a8;
+}
+.modal-footer{
+  background-color :#c5dcf5;
+  }
+}

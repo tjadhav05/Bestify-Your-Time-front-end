@@ -1,0 +1,77 @@
+<!--Login Form-->
+<div class="login-dark img-fluid">
+    <form method="post">
+        <h2 class="sr-only">Login Form</h2>
+        <div class="illustration"><em class="icon ion-ios-locked-outline"></em></div>
+        <div class="form-group"><input class="form-control" [(ngModel)]="email" type="email" name="email"
+                placeholder="Email"></div>
+        <div class="form-group"><input class="form-control" [(ngModel)]="password" type="password" name="password"
+                placeholder="Password"></div>
+        <div class="form-group"><button class="btn btn-primary btn-block" (click)="onLogin()">Log In</button></div>
+        <a class="forgot" (click)="forgotPassword()">Forgot your password?</a>
+    </form>
+</div>
+
+<!-- Modal for fogot password -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary forgot" id="forgot" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade background" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Forgot Password?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-wrapper">
+                    <label class="label" for="EmailOtp">Otp Sent to Your Registered Mail</label>
+                    <div class="form-group"><input class="form-control" [(ngModel)]="EmailOtp" type="number"
+                            name="EmailOtp" placeholder="OTP please"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="closeModal" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="OtpSubmit()">Submit Otp</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Password Modal -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary reset" id="reset" data-toggle="modal" data-target="#NewPassword">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="NewPassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Forgot Password?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="forgotclosemodal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-wrapper">
+                    <label class="label" for="password">Enter new password</label>
+                    <div class="form-group"><input class="form-control" [(ngModel)]="password" type="password"
+                            name="password" placeholder="New Password"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="resetClose" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="forgotPassword()">Password Update</button>
+            </div>
+        </div>
+    </div>
+</div>

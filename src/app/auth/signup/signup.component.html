@@ -1,0 +1,66 @@
+<div class=" login-dark img-fluid">
+  <div class="login">
+    <div class="login-form">
+
+      <div class="form-wrapper">
+
+        <form [formGroup]="userForm" (ngSubmit)="onSignup()">
+          <div class="form-group row input-wrapper">
+            <span class="form-group col-lg-6">
+              <label class="label" for="firstname">Firstname</label>
+              <input formControlName="firstname" type="text" class="form-control input" id="firstname"
+                placeholder="First Name">
+            </span>
+            <span class="form-group col-lg-6">
+              <label class="label" for="lastname">Lastname</label>
+              <input formControlName="lastname" type="text" class="form-control input" id="lastname"
+                placeholder="Last name">
+            </span>
+          </div>
+          <div class="form-group .form-control">
+            <label class="label" for="email">Email</label>
+            <input formControlName="email" type="email" class="form-control input" id="email" placeholder="Email">
+            <span class="text-danger" *ngIf="(f.email.touched || submitted) && f.email.errors?.required">
+              Email is required
+            </span>
+            <span class="text-danger" *ngIf="f.email.touched && f.email.errors?.invalidPassword">
+              * Please provide a valid email address.
+            </span>
+          </div>
+
+
+          <div class="form-group input-wrapper">
+            <label class="label" for="phone">Phone</label>
+            <input formControlName="phone" type="number" class="form-control input" id="phone"
+              placeholder="Phone number">
+            <span class="text-danger" *ngIf="f.phone.touched && f.phone.errors?.invalidPassword">
+              * Please provide 10 digit number
+            </span>
+          </div>
+          <div class="form-group input-wrapper">
+            <label class="label" for="password">Passowrd</label>
+            <input formControlName="password" type="password" class="form-control input" id="password"
+              placeholder="Password">
+            <span class="text-danger" *ngIf="(f.password.touched || submitted) && f.password.errors?.required">
+              Password is required
+            </span>
+            <span class="text-danger" *ngIf="f.password.touched && f.password.errors?.invalidPassword">
+              * Password must be alphanumeric with atleast one special char & length 8 to 16 char
+            </span>
+          </div>
+          <div class="actions  ">
+            <button class="btn btn-primary btn-block" href="#">Register</button>
+          </div>
+
+
+          <div class="already">
+            Already have Acoount? <a routerLink="/auth/Login">login</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="login-decoration">
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<section class="wrapper">
+    <div class="quiz-card-header pt-2">
+        <h1 class="cate-title">{{category}}</h1>
+        <div class="searchBar">
+            <input style="font-family: FontAwesome;" type="text" name="searchBar" id="searchBarInput"
+                class="searchBarInput" [(ngModel)]="quizname" (ngModelChange)="Search()"
+                placeholder="&#xf002; Search for a Quiz ...">
+        </div>
+    </div>
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-sm-4" *ngFor="let qname of questions; let i = index">
+                <div class="card text-white card-has-bg click-col"
+                    style="background-image:url('{{qname.imgurl}}'); margin-bottom: 80px;">
+                    <img class="card-img d-none" src="{{qname.imgurl}}"
+                        alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="card-body row">
+                            <h2 class="card-meta mb-2 col-lg-8">{{qname.quizname}}</h2>
+                            <!--Add to favourite icon-->
+                            <div class="addfav col-lg-4">
+                                <!--After clicking icon it will add quiz in favourite-->
+                                <em class="fa fa-3x" (click)="addToFav(i,qname.quizname)"
+                                    [ngClass]="qname.status ? 'fa-heart' : 'fa-heart-o'" aria-hidden="true">
+                            </em>
+                            </div>
+                        </div>
+                        <div class="card-body text-center "><i class="fa fa-play-circle-o fa-3x playbtn"
+                                aria-hidden="true" (click)="start(qname.quizname)"></i></div>
+                        <div class="card-footer row">
+                            <div class="media col-sm-6">
+                                <em class="fa fa-trophy mr-3 fa-3x rounded-circle" aria-hidden="true"
+                                    style="color:#ffc947;;"></em>
+                                <h5 class="my-0 text-white d-block"> High Score &nbsp;{{qname.highscore}}</h5>
+                            </div>
+                            <div class="text-right col-sm-6">
+                                <button (click)="start(qname.quizname)" class="btn btn-outline-warning" style>
+                                    Start
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>

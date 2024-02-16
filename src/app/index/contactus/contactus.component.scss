@@ -1,0 +1,145 @@
+
+$primary-color: #5768AD;
+$seconday-color: #120851;
+$white-color: #ffffff;
+$heading-color: #263246;
+$para-color: #6f6f6f;
+$black-color: #000000;
+$heading-color-2: #252525;
+$normal-color: #1c1c1c;
+$background: #f5f5f5;
+$background-2: #f2f2f2;
+$border: #ebebeb;
+$border-1: #e1e1e1;
+
+$fm-unna: 'Unna', serif;
+$fm-nunito: 'Nunito Sans', sans-serif;
+$_yellow:#ffc947;
+$_dark:#0a1931;
+$_blue:#032a79;
+$white-color: #ffffff;
+
+
+//contactUs
+.contact {
+    margin-top: 100px;
+    padding-bottom: 80px;
+  
+  }
+  
+  .contact__widget__item {
+    text-align: center;
+    margin-bottom: 30px;
+  span {
+      font-size: 36px;
+      color: $_dark;
+    }
+  h4 {
+      color: $heading-color;
+      margin-top: 16px;
+      margin-bottom: 5px;
+    }
+  p {
+      color: #9B9EA3;
+      margin-bottom: 0;
+    }
+  }
+//Map
+  .map {
+    height: 500px;
+    position: relative;
+    iframe {
+      width: 100%;
+    }
+  }
+  .map .map-inside {
+    position: absolute;
+    left: 50%;
+    top: 160px;
+   
+    transform: translateX(-175px);
+  }
+.map .map-inside i {
+    font-size: 48px;
+    color: $primary-color;
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+   
+    -ms-transform: translateX(-18px);
+    transform: translateX(-18px);
+  }
+.map .map-inside .inside-widget {
+    width: 350px;
+    background: #ffffff;
+    text-align: center;
+    padding: 23px 0;
+    position: relative;
+    z-index: 1;
+ 
+    box-shadow: 0 0 20px 5px #0c071a26;
+  }
+.map .map-inside .inside-widget:after {
+    position: absolute;
+    left: 50%;
+    bottom: -38px;
+  
+   
+    border: 18px solid transparent;
+    border-top: 36px solid #ffffff;
+    content: "";
+    z-index: -1;
+  }
+.map .inside-widget h5 {
+    font-size: 20px;
+    color: $heading-color;
+    margin-bottom: 4px;
+  }
+.map ul li {
+    list-style: none;
+    font-size: 16px;
+    color: #9B9EA3;
+    line-height: 26px;
+  }
+  //Breadcrumb
+.breadcrumb-option {
+    padding-top: 215px;
+    padding-bottom: 170px;
+    margin-top: -50px;
+  } 
+  .breadcrumb__text {
+    text-align: center;
+    h2 {
+        font-size: 44px;
+        color: $_dark;
+        margin-bottom: 6px;
+    }
+  .aboutus{
+      margin-top: 50px;
+    }
+  }
+    .breadcrumb__widget {
+    a {
+        display: inline-block;
+        font-size: 16px;
+        color: $_dark;
+        font-weight: 700;
+        margin-right: 15px;
+        position: relative;
+  
+        &:after {
+            position: absolute;
+            right: -14px;
+            top: 1px;
+            font-weight: 400;
+            content: '/';
+        }
+    }
+ span {
+        display: inline-block;
+        font-size: 16px;
+        
+        font-weight: 400;
+    }
+  }
+  

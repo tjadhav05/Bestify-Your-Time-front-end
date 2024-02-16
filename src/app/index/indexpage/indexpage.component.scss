@@ -1,0 +1,149 @@
+$_yellow:#ffc947;
+$_dark:#0a1931;
+$_blue:#032a79;
+$white-color: #ffffff;
+.horizonl_line_about_us{
+  background: $_dark;
+}
+.our_vision{
+  background: #E7E6E1;
+}
+.overlay { 
+   // color:rgb(240, 238, 238);
+    position: absolute;
+    z-index: 12;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+.main-text{
+  position: absolute;
+  top: 50px;
+  width: 96.66666666666666%;
+  color: white;
+}
+.carousel-caption span{
+color: $_yellow;
+}
+.carousel-caption p{
+  
+    width: 100%;
+    align-self: start;
+  
+}
+.btn-min-block {
+  min-width: 170px;
+  line-height: 26px;
+}
+.btn-clear {
+  color: #FFF;
+  border-color: #FFF;
+  border-width: 2px;
+  margin-right: 15px;
+}
+.btn-clear:hover {
+  color: #000;
+  background-color: #6699CC;
+}
+.arrowalign {
+  top: 50%;
+}
+.arrowalign:hover {
+  vertical-align: middle;
+}
+.carousel-control {
+  color: #fff;
+  top: 50%;
+  bottom: auto;
+  padding-top: 0px;
+  width: 30px;
+  height: 30px;
+  text-shadow: none;
+  opacity: .9;
+}
+@media only screen and (min-width:1240px) and (max-width:1440px)  {
+  
+  .carousel-inner {
+    img{
+height: 38rem;
+ 
+  }
+}
+}
+
+@media only screen and (max-width:320px)  {
+  .main-text p{
+    display: none;
+  }
+  .main-text h1{
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width:425px)  {
+  .main-text p{
+    display: none;
+  }
+  .main-text h1{
+    font-size: 1.2rem;
+  }
+}
+//Home Aboutus
+.home-about {
+  padding-bottom: 0;
+}
+.home__about__pic__item{
+    .img1 {
+        height: 55vh;
+        width: 52vh;
+        margin-top: 10px;
+    }
+    margin-bottom: 10px;
+}
+.home__about__text {
+  padding-top: 35px;
+  .section-title .title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+ .section-title{
+   img{
+     width: 6vh;
+   }
+ }
+  .span1 {
+      display: block;
+      font-size: 20px;
+      color: $_blue;
+      margin-bottom: 12px;
+  }
+}
+
+.primary-btn {
+  display: inline-block;
+  font-size: 14px;
+  padding: 16px 36px 14px;
+  color: $white-color;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: $_dark;
+  border-radius: 2px;
+  letter-spacing: 2px;
+}
+
+//for iphone
+@media only screen and (max-width: 600px) {
+  .home__about__pic__item {
+      .img1 {
+           height: 66vh;
+           width: 52vh;
+  }
+}
+}
+//for mobile screen width : 320px
+@media only screen and (max-width: 320px) {
+  .home__about__pic__item {
+      .img1 {
+           height: 28vh;
+  }
+}
+}

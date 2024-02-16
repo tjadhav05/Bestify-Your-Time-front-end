@@ -1,0 +1,47 @@
+<section class="quizeBody">
+  <div class="container">
+    <form (change)="onSave()" [formGroup]="form" class="quizeForm">
+      <div class="question ">
+        <div class="question-cont"> <button class="btn button1" (click)="onSaveQuize()">Save</button>
+          <p class="timer">{{counter |formatTime }} </p>
+        </div>
+        <div class="py-2 h5 questionHead">Q.{{currentQuestionindex +1}} &nbsp;&nbsp;<strong>{{question?.question}}</strong>
+          <div class="QuestionPallet">{{currentQuestionindex +1}}/{{totalQuestions}}</div>
+        </div>
+        <div class=" choice" id="options" *ngIf="!isDescriptive; else elseBlock">
+          <input type="radio" formControlName="optiona" id="control_01" name="optiona" [checked]="useranswer == '1' "
+              value="{{question?.option.optionA}}">
+          <label for="control_01" class="element-animation1 options">A&nbsp;&nbsp; {{question?.option.optionA}}
+          </label>
+
+          <input type="radio" formControlName="optiona" id="control_02" name="optiona" [checked]="useranswer  == '2' "
+              value="{{question?.option.optionB}}"> 
+          <label for="control_02" class="element-animation1 options">B.&nbsp;&nbsp;{{question?.option.optionB}}
+          </label>
+          
+          <input type="radio" formControlName="optiona"  id="control_03" name="optiona" [checked]="useranswer  == '3' "
+              value="{{question?.option.optionc}}">
+          <label for="control_03" class="element-animation1 options">C.&nbsp;&nbsp;{{question?.option.optionc}}</label>
+
+          <input type="radio" formControlName="optiona" id="control_04" name="optiona" [checked]="useranswer  == '4' "
+              value="{{question?.option.optionD}}">
+          <label for="control_04" class="element-animation1 options">D.&nbsp;&nbsp;{{question?.option.optionD}}</label>
+        </div>
+        <ng-template #elseBlock>
+          <input formControlName="optiona" name="optiona" type="text" placeholder="{{useranswer}}">
+        </ng-template>
+      </div>
+      <div class="d-flex align-items-center pt-3">
+        <div id="prev"> <button class="btn button1" *ngIf="!showPrevButton" (click)="onPrev()">Previous</button>
+        </div>
+        <div class="ml-auto mr-sm-5">
+          <button class="btn button1 " *ngIf="showFirstButton; else elseB" (click)="onNext()">Next</button>
+          <ng-template #elseB>
+            <button (click)="onSubmit()" class="btn btn-danger" ng-disabled="isteam==0 || secondEdit">Submit
+            </button>
+          </ng-template>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

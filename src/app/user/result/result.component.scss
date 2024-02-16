@@ -1,0 +1,49 @@
+.display-4 {
+  color: red;
+}
+.jumbotron {
+  margin: 3rem;
+  border-radius: 2vh;
+  background-color: #ffffb5;
+  background-image: linear-gradient(315deg, #ffffb5 0%, #247ba0 74%);
+  .score-logo {
+    margin-top: 6rem;
+  }
+}
+.class1{
+  background-color: #f89898;
+  font-family: FontAwesome;
+  content: '\f00c';
+}
+.class2{
+  background-color: #c7f583;
+}
+.score {
+  font-size: 3rem;
+}
+  .quiz{
+    background: #082a46;
+  }
+  .answerList {
+    margin-bottom: 5%;
+    padding: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    .quizTable {
+      padding: 15px;
+      background-color: #ffffff;
+      box-shadow: 0 0 20px #00000065;
+
+        margin-top: 1rem;
+    .quizQuestion{
+      border-bottom: 2px solid blue;
+    }
+
+    }
+  }
+  @media (max-width: 100px) {
+    .quizeBody {
+      width: 45vh;
+      margin-left: 2vh;
+    }
+  }

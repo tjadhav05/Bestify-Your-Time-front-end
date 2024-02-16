@@ -1,0 +1,23 @@
+$_dark:#0a1931;
+$_blue:#032a79;
+$_yellow:#ffc947;
+$_light-yellow:#feddbe;
+.navbar{
+	background-color: $_dark;	
+	width: 100%; 
+	overflow: hidden;
+}
+.user-panel {
+	float: right;
+	font-weight: 500;
+	background: $_yellow;
+	padding: 8px 28px;
+	border-radius: 30px;
+	a {
+	  font-size: 14px;
+	  color: #131313;
+	}
+  }
+  .logoclass{
+	  color: $_yellow;
+}

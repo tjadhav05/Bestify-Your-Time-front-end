@@ -1,0 +1,41 @@
+<div class="wrapper">
+    <div>
+        <div class="row">
+            <div class="col-lg-4" class="search">
+                <div class="input-group">
+                    <input type="text" class="form-control search-menu" [(ngModel)]="quizname"
+                        (ngModelChange)="Search()" placeholder="Search...">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <em class="fa fa-search" aria-hidden="true"></em>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let quiz of quizlist; let index=index">
+                <div class="profile-card-6">
+                    <img src="{{quiz.imgurl}}" class="img img-responsive img-fluid" alt="">
+                    <div class="profile-name">{{quiz['quizname']}}
+                    </div>
+                    <div class="profile-overview">
+                        <div class="profile-overview">
+                            <div class="row">
+                                <div class="col col-sm-6 text-center">
+                                    <button type="submit" class="btn btn-primary"
+                                        (click)="setQuizname(quiz['quizname'])">Edit</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="submit" class="btn btn-danger"
+                                        (click)="deleteQuiz(quiz['quizname'])">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

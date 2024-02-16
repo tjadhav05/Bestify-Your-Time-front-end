@@ -1,0 +1,51 @@
+<section class="wrapper">
+    <div class="quiz-card-header pt-2">
+        <h1 class="cate-title">My Favourites</h1>
+       
+    </div>
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-sm-4" *ngFor="let fav of favList; let i = index">
+                <div class="card text-white card-has-bg click-col"
+                    style="background-image:url('{{fav.imgurl}}'); margin-bottom: 80px;">
+                    <img class="card-img d-none" src="{{fav.imgurl}}"
+                        alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <div class="card-body row">
+                            <h2 class="card-meta mb-2 col-lg-8">{{fav.quizname}}</h2>
+                            <!--Add to favourite icon-->
+                            <!-- <div class="addfav col-lg-4">
+                              
+                                <i class="fa fa-3x" 
+                                    (click)="addToFav(i,qname.quizname)"  
+                                    [ngClass]="qname.status ? 'fa-heart' : 'fa-heart-o'"
+                                   aria-hidden="true">
+                                </i>
+                            </div> -->
+                        </div>
+                        <div class="card-body text-center "><em class="fa fa-play-circle-o fa-3x playbtn"
+                                aria-hidden="true" ></em></div>
+                        <div class="card-footer row">
+                           
+                            <div class="text-right col-sm-6">
+                                <button class="btn btn-success" (click)="startQuiz(fav.quizname)" >
+                                    Start
+                                </button>
+                                
+                            </div>
+                            <div class="text-left col-sm-6">
+                                <button class="btn btn-danger" (click)="deleteFromFav(fav.quizname)">
+                                    Delete
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>

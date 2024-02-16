@@ -1,0 +1,51 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <img class="score-logo" src="../../../assets/quiz-result/quiz-score.png" alt="test-score">
+            </div>
+            <div class="col-lg-8 col-lg-8 col-sm-8">
+                <h1 class="display-4">{{username}} Your Score !!</h1>
+                <h6 class="score">{{userscore}}</h6>
+                <table class="table">
+                    <tr class="row">
+                        <td>
+                            <p>Total Questions</p>
+                            <p>Total Correct Questions</p>
+                        </td>
+                        <td>
+                            <p>{{totalQuestion}}</p>
+                            <p>{{correctQuestCount}}</p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="row pt-4">
+                    <div class="col-6">
+                        <button class="btn btn-success quiz" (click)="showQuestions()">View Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--view Quiz-->
+<section *ngIf="isShowQuestions" class="jumbotron jumbotron-fluid qAnswer" id="quiz">
+    <div class="answerList">
+        <div class="quizTable" *ngFor="let question of questions">
+            <div class="quizQuestion"
+                [ngClass]="{'class1':question.category == '0' ,'class2':question.category == '1'}">{{question.question}}
+            </div>
+            <div *ngIf="!isDescriptive; else elseBlock">
+                <div [ngClass]="{'text-primary':question.timer === '1'} ">{{question.option.optionA}}</div>
+                <div [ngClass]="{'text-primary':question.timer === '2'} ">{{question.option.optionB}}</div>
+                <div [ngClass]="{'text-primary':question.timer === '3'} ">{{question.option.optionc}}</div>
+                <div [ngClass]="{'text-primary':question.timer === '4'} ">{{question.option.optionD}}</div>
+            </div>
+            <ng-template #elseBlock>
+                <div>{{question.questionid}}</div>
+            </ng-template>
+        </div>
+
+    </div>
+</section>

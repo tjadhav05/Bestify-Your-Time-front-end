@@ -1,0 +1,51 @@
+<section class="quiz-form dark">
+    <div class="container">
+        <div class="block-heading">
+            <h2>Set Question</h2>
+        </div>
+        <form>
+            <div class="question">
+                <h6 class="title">Enter Question</h6>
+                <hr>
+                <div class="item form-group">
+                    <textarea [(ngModel)]="question" class="form-control" rows="8" id="Question"
+                        placeholder="Type Question here" name="question" required></textarea>
+                </div>
+                <h3 class="title">Enter Options</h3>
+                <div class="item form-group row">
+                    <div class="col-lg-6">
+                        <label for="A">Option A</label>
+                        <input [(ngModel)]="optionA" type="text" name="optionA" class="form-control" required>
+                        <label for="B">Option B</label>
+                        <input [(ngModel)]="optionB" type="text" name="optionB" class="form-control" required>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="C">Option C</label>
+                        <input [(ngModel)]="optionC" type="text" name="optionC" class="form-control" required>
+                        <label for="D"> Option D</label>
+                        <input [(ngModel)]="optionD" type="text" name="optionD" class="form-control" required>
+                    </div>
+                </div>
+                <div class="item form-group row">
+                    <div class="col-lg-6">
+                        <label for="Answer">Answer</label>
+                        <input [(ngModel)]="answer" type="text" name="answer" class="form-control" required>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="Marks">marks</label>
+                        <input [(ngModel)]="marks" type="number" name="marks" class="form-control" required>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-10">
+                        <button class="btn btn-primary" (click)="onAddQuestion()">Add question</button>
+                    </div>
+                    <div class="col-lg-2">
+                        <button class="btn btn-danger" style="margin-left:10px" (click)="onDone()">Done</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

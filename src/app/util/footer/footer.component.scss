@@ -1,0 +1,113 @@
+//Footer Scss
+$primary-color: #0a1931;
+$_yellow:#ffc947;
+$_dark-font-color:#0a1931;
+$_footer_bg: #D8E3E7;
+.footer {
+    background: $_footer_bg;
+    padding-top: 70px;
+  }
+  .footer__about {
+    margin-bottom: 30px;
+    ul {
+      margin-bottom: 25px;
+      margin-top: 20px;
+      li {
+        color:$_dark-font-color;
+        line-height: 37px;
+        font-size: 16px;
+        list-style: none;
+        i {
+          font-size: 16px;
+          color: $_yellow;
+          margin-right: 5px;
+        }
+      }
+    }
+    .logoimg{
+        margin-left: 30px;
+    }
+    .footerimage{
+        font-size: 1.2rem;
+        color: $_dark-font-color;
+        margin-left: 10px;
+    }
+  }
+  .footer__widget {
+    margin-bottom: 30px;
+    .heading{
+        margin-left: 30px;
+    }
+   h5 {
+      font-size: 20px;
+      color: $_dark-font-color;
+      margin-bottom: 25px;
+    }
+    ul {
+      li {
+        list-style: none;
+       a {
+          font-size: 16px;
+          color: $_dark-font-color;
+          line-height: 37px;
+        }
+      }
+    }
+    .footer-address {
+      li {
+        list-style: none;
+        font-size: 16px;
+        color: $_dark-font-color;
+        line-height: 37px;
+        i {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .footer__copyright {
+    border-top: 1px solid rgba(225, 225, 225, 0.1);
+    overflow: hidden;
+    padding: 15px 0;
+    margin-top: 20px;
+  }
+  .footer__copyright__text {
+   small {
+      // font-size: 14px;
+      color: #6e7580;
+      margin-bottom: 0;
+    }
+    i {
+      color: #a11f1f;
+    }
+    a {
+      color: $primary-color;
+    }
+  }
+  .footer__copyright__social {
+    text-align: right;
+  
+    a {
+      display: inline-block;
+      font-size: 15px;
+      color: $_dark-font-color;
+      margin-right: 25px;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  @media screen and (max-width:600px) {
+    .footer{
+      .row{
+        text-align: center;
+      }
+      .footer__about{
+        padding-right: 73px;
+      }
+      .footer__widget{
+        padding-right: 73px;
+      }
+    }
+  }

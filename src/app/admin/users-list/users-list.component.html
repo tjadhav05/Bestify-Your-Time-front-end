@@ -1,0 +1,33 @@
+<div class="card mb-3">
+  <div class="card-header text-white">
+    <em class="fa fa-table"></em>&nbsp; &nbsp;Users
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>email</th>
+            <th>Contact</th>
+            <th>Modify</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let index=index">
+            <td>{{index+1}}</td>
+            <td style="text-transform: uppercase;">{{user['username']}}</td>
+
+            <td style=" text-transform: lowercase;">{{user['email']}}</td>
+            <td>{{user['phone']}}</td>
+            <td>
+              <button class="btn btn-danger" style="margin-left: 10px; "
+                (click)="onDeleteUser(user['userId'])">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

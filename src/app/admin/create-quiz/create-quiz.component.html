@@ -1,0 +1,33 @@
+<section class="quiz-form dark">
+  <div class="container">
+    <div class="block-heading">
+      <h2>Create Quiz</h2>
+    </div>
+    <form>
+      <div class="question">
+        <h3 class="title">Quiz Name</h3>
+        <div class="item form-group">
+          <input [(ngModel)]="quizname" type="text" name="Quiz Name" class="form-control">
+        </div>
+        <h3 class="title">Category</h3>
+        <div class="item form-group">
+
+          <select [(ngModel)]="category" name="category" class="form-control">
+            <option value="Brain Teaser">Brain Teaser</option>
+            <option value="Logical Reasoning">Logical Reasoning</option>
+            <option value="General Knowledge">General Knowledge</option>
+          </select>
+        </div>
+        <h3 class="title">Quiz Time</h3>
+        <div class="item form-group">
+          <input [(ngModel)]="timer" name="timer" type="number" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <button type="button" class="btn btn-block" (click)="onClick()">Procced</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</section>

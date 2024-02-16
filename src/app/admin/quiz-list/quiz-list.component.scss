@@ -1,0 +1,111 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open Sans:400,600,800";
+.search {
+	.input-group{ width: 50vh;
+}
+// {
+	
+}
+div {
+	font-family: 'Open Sans';
+	margin: 0px;
+}
+input {
+	font-family: 'Open Sans';
+	margin: 0px;
+}
+p {
+	font-family: 'Open Sans';
+	margin: 0px;
+}
+a {
+	font-family: 'Open Sans';
+	margin: 0px;
+	color: inherit;
+	&:hover {
+		color: inherit;
+	}
+	&:focus {
+		color: inherit;
+	}
+}
+
+.container-fluid {
+	max-width: 1200px;
+}
+.container {
+	max-width: 1200px;
+}
+.card-container {
+	padding: 100px 0px;
+}
+.profile-card-6 {
+	max-width: 300px;
+	background-color: #FFF;
+	border-radius: 5px;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, .1);
+	overflow: hidden;
+	position: relative;
+	margin: 10px auto;
+	cursor: pointer;
+	height: 300px;
+	img {
+		transition: all .15s linear;
+	}
+	.profile-name {
+		position: absolute;
+		top: 10px;
+		font-size: 25px;
+		font-weight: bold;
+		color: #ffffff;
+		padding: 15px 20px;
+		background: linear-gradient(140deg, rgba(0, 0, 0, .4) 50%, rgba(255, 255, 0, 0) 50%);
+		transition: all .15s linear;
+	}
+	.profile-position {
+		position: absolute;
+		color: rgba(255, 255, 255, .4);
+		top: 100px;
+		transition: all .15s linear;
+	}
+	.profile-overview {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		background: linear-gradient(0deg, rgba(0, 0, 0, .4) 50%, rgba(255, 255, 0, 0));
+		color: #FFF;
+		padding: 50px 0px 20px 0px;
+		transition: all .15s linear;
+		h3 {
+			font-weight: bold;
+		}
+		p {
+			color: rgba(255, 255, 255, .7);
+		}
+	}
+	&:hover {
+		img {
+			filter: brightness(80%);
+		}
+		.profile-name {
+			padding-left: 25px;
+			padding-top: 20px;
+		}
+		.profile-position {
+			left: 40px;
+		}
+		.profile-overview {
+			padding-bottom: 25px;
+		}
+	}
+}
+@media screen and (max-width:600px) {
+	.search {
+		padding-left: 0;
+	}
+}
+@media only screen and (min-width:300px) and(max-width:600px) {
+	.row {
+		left: 10px;
+	}
+}
